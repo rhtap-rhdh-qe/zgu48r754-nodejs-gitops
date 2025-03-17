@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: zgu48r754-nodejs-gitops
+  description: This is GitOps manifest for zgu48r754-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=zgu48r754-nodejs
+    backstage.io/kubernetes-id: zgu48r754-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: zgu48r754-nodejs-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:zgu48r754-nodejs
